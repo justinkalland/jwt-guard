@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/justinkalland/jwt-guard/issues"
   },
-  "main": "index.js",
+  "main": "./dist",
   "scripts": {
     "test": "jest",
     "lint": "eslint .",

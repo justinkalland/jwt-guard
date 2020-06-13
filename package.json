@@ -1,6 +1,6 @@
 {
   "name": "jwt-guard",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Middleware for guarding with JWT roles and claims.",
   "repository": "github:justinkalland/jwt-guard",
   "homepage": "https://github.com/justinkalland/jwt-guard#readme",

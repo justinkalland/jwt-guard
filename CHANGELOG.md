@@ -4,12 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.1](https://github.com/justinkalland/jwt-guard/compare/v0.0.2...v1.0.1) (2020-06-16)
 
-
-### ⚠ BREAKING CHANGES
-
-* **middleware:** move secretOrPublic key from options to first parameter
-
-* **middleware:** move secretOrPublic key from options to first parameter ([1da6730](https://github.com/justinkalland/jwt-guard/commit/1da67306b33a51bdb22e4e9aa4d917cf0f82172d))
+* add script to build and test before publishing to npm
 
 ## [1.0.0](https://github.com/justinkalland/jwt-guard/compare/v0.0.2...v1.0.0) (2020-06-16)
 

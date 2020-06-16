@@ -23,7 +23,8 @@
     "validate": "run-s test lint",
     "build": "rm -rf dist/ && tsc",
     "prerelease": "git checkout master && git pull origin master && npm run validate",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepublishOnly": "run-s test build"
   },
   "author": "Justin Kalland <justin@kalland.com>",
   "license": "MIT",

@@ -8,9 +8,7 @@ describe('Express middleware', () => {
   it('works with no token', async () => {
     const app = express()
 
-    app.use(jwtGuard({
-      secretOrPublicKey: 'secret'
-    }))
+    app.use(jwtGuard('secret'))
 
     app.get('/ping', function (req, res) {
       expect(req.token).toBeInstanceOf(Token)
@@ -27,9 +25,7 @@ describe('Express middleware', () => {
   it('works with different Auth header', async () => {
     const app = express()
 
-    app.use(jwtGuard({
-      secretOrPublicKey: 'secret'
-    }))
+    app.use(jwtGuard('secret'))
 
     app.get('/ping', function (req, res) {
       expect(req.token).toBeInstanceOf(Token)
@@ -47,9 +43,7 @@ describe('Express middleware', () => {
   it('skips OPTIONS', async () => {
     const app = express()
 
-    app.use(jwtGuard({
-      secretOrPublicKey: 'secret'
-    }))
+    app.use(jwtGuard('secret'))
 
     app.options('/ping', function (req, res) {
       expect(req.token).toBeUndefined()
@@ -64,9 +58,7 @@ describe('Express middleware', () => {
   it('passes role', async () => {
     const app = express()
 
-    app.use(jwtGuard({
-      secretOrPublicKey: 'secret'
-    }))
+    app.use(jwtGuard('secret'))
 
     app.get('/ping', function (req, res) {
       req.token.require.role('admin').guard()
@@ -90,9 +82,7 @@ describe('Express middleware', () => {
   it('fails role', async () => {
     const app = express()
 
-    app.use(jwtGuard({
-      secretOrPublicKey: 'secret'
-    }))
+    app.use(jwtGuard('secret'))
 
     app.get('/ping', function (req, res) {
       req.token.require.role('blog:read').guard()
@@ -116,9 +106,7 @@ describe('Express middleware', () => {
   it('fails no token with role', async () => {
     const app = express()
 
-    app.use(jwtGuard({
-      secretOrPublicKey: 'secret'
-    }))
+    app.use(jwtGuard('secret'))
 
     app.get('/ping', function (req, res) {
       req.token.require.role('admin').guard()

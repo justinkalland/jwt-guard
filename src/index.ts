@@ -6,11 +6,7 @@ declare module 'express-serve-static-core' {
   }
 }
 
-interface Options {
-  secretOrPublicKey: Buffer | string
-}
-
-export default function (options: Options) {
+export default function (secretOrPublicKey: string) {
   return function (req, res, next) {
     if (req.method === 'OPTIONS') {
       return next()
@@ -25,7 +21,7 @@ export default function (options: Options) {
       }
     }
 
-    req.token = new Token(encodedJwt, options.secretOrPublicKey)
+    req.token = new Token(encodedJwt, secretOrPublicKey)
 
     next()
   }

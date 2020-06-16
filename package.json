@@ -7,6 +7,15 @@
   "bugs": {
     "url": "https://github.com/justinkalland/jwt-guard/issues"
   },
+  "keywords": [
+    "jwt",
+    "express",
+    "connect",
+    "authz",
+    "authn",
+    "token",
+    "authorization"
+  ],
   "main": "./dist",
   "scripts": {
     "test": "jest",

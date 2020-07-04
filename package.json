@@ -67,10 +67,5 @@
     "dist/index.js",
     "dist/index.d.ts",
     "dist/lib"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+  ]
 }
